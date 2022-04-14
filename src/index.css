@@ -5,9 +5,38 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #e1ebf6;
+  padding: 20px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+main {
+  border-radius: 5px;
+  background-color: #fff;
+  height: 30em;
+  padding: 30px;
+}
+
+/* City form */
+.city-input {
+  padding: .5em;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid gray;
+}
+
+.frmCity {
+  margin-bottom: 2em;
+}
+
+
+/* Datetime */
+.datetime {
+
+  font-size: .8rem;
+  color: rgb(109, 109, 109);
 }
