@@ -26,8 +26,6 @@ function LocationInput() {
     await setLocation({lat: crds.latitude, lng: crds.longitude});
   }
 
-  const 
-
   return (
     <form id="frmCity" className="frmCity">
       <label htmlFor="city" className="city-label">Your city: </label>
