@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -17,7 +22,7 @@ code {
 main {
   border-radius: 5px;
   background-color: #fff;
-  height: 30em;
+  height: 34em;
   padding: 30px;
 }
 
@@ -29,14 +34,99 @@ main {
   border: 1px solid gray;
 }
 
-.frmCity {
-  margin-bottom: 2em;
-}
-
 
 /* Datetime */
 .datetime {
 
   font-size: .8rem;
   color: rgb(109, 109, 109);
+}
+
+.weatherbox {
+  margin-top: 2em;
+
+}
+
+/* Temp */
+.temp-symbol {
+  font-size: 14px;
+}
+
+.weather-title_header {
+  display: flex;
+  align-items: center;
+  margin-top: 13px;
+}
+
+.weather-title_header>img {
+  height: 6em;
+}
+
+.weather-title_header__temp {
+  font-weight: bold;
+  position: relative;
+}
+
+.weather-title_header__temp-symbol {
+  position: absolute;
+  top: -7px;
+  font-size: small;
+}
+
+.weather-title_description {
+  text-align: center;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.weather-title_footer {
+  display: flex;
+}
+
+.weather-title_footer_detail {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.weather-title_footer_detail>h5 {
+  color:rgb(109, 109, 109);
+  padding: 0px 13px;
+}
+
+.forecast {
+  margin-top: 5em;
+  display: flex;
+
+}
+
+.forecast-item {
+  margin: 5px;
+  padding: 15px;
+  border: 1px solid rgb(226, 225, 225);
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.forecast-item.active {
+  color: white;
+  background-color: #5596f6;
+  border: none;
+}
+
+/* Utils */
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.temperature {
+  max-height: 10em;
+  width: 25em;
+  margin-left: 20px;
+}
+
+
+.temperature-chart {
+  height: 100px;
 }

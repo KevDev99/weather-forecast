@@ -1,8 +1,10 @@
 const CurrentDateTime = () => {
-  const currentDate = new Date(); 
+  const currentDate = new Date();
   var dateTime = currentDate.toUTCString();
   return (
-    <span className="datetime">{dateTime}</span>
+    <div>
+      <span className="datetime">{dateTime}</span>
+    </div>
   )
 }
 

@@ -5,25 +5,31 @@ const WeatherContext = createContext();
 
 export const WeatherProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
-  const [weather, setWeather] = useState([]);
+  const [location, setLocation] = useState();
+  const [weatherToday, setWeatherToday] = useState();
+  const [weatherData, setWeatherData] = useState([]);
 
-  useEffect(() => {
-    fetchWeather();
-  }, [])
 
   const fetchWeather = async () => {
-    const response = await (`https://api.openweathermap.org/data/2.5/weather?lat=47.408707&lon=9.620293&appid=f165aa50e5acf749fcc4e89042ce734c`);
+
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${location.lat}&lon=${location.lng}&units=metric&exclude=current,minutely,hourly,alerts&appid=SECRET_API_KEY`);
     const data = await response.json();
 
-    setWeather(data);
+    setWeatherData(data.daily);
+    setWeatherToday(weatherData[0])
     setIsLoading(false);
   }
+
 
   return (
     <WeatherContext.Provider
       value={{
-        weather,
+        weatherToday,
+        weatherData,
         isLoading,
+        location,
+        setLocation, 
+        fetchWeather
       }}
     >
       {children}
